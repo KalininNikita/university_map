@@ -43,7 +43,10 @@ class SearchItem extends React.Component {
         }
         return (
             <div className={s.SearchItem}>
-                <div className={s.Input}>
+                <div 
+                    className={s.Input}
+                    style={{borderColor: (this.state.CurrentVertex === null && (this.props.Check || this.state.Focuse))? "#FF2C55": null}}
+                    >
                     <div className={s.Circle}>
                         <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="5" cy="5" r="5" fill={this.props.ColorCircle}/>
@@ -61,13 +64,6 @@ class SearchItem extends React.Component {
                                 this.setState({Focuse: true});
                             }}
                         }/>
-                    {
-                        (this.state.CurrentVertex === null && (this.props.Check || this.state.Focuse)) &&
-                        <div className={s.Message}>
-                            <div className={s.Triangle}>{" "}</div>
-                            Вы не задали точку
-                        </div>
-                    }
                 </div>
                 
                 {this.state.SelectorVisibility &&
