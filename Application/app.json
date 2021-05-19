@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "AksMaks-pnipu-map",
-    "slug": "pnipu-map",
+    "name": "pstu-map",
+    "slug": "pstu-map",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
